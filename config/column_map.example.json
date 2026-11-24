@@ -1,0 +1,11 @@
+{
+  "Date": "date",
+  "Session": "session_id",
+  "Opponent": "opponent",
+  "Result": "result",
+  "First Serve In": "first_serves_in",
+  "Serve Points": "serve_points",
+  "Winners": "winners",
+  "Unforced Errors": "unforced_errors",
+  "Average Serve Speed (km/h)": "avg_serve_speed_kmh"
+}

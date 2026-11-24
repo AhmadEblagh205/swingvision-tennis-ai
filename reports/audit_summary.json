@@ -1,0 +1,94 @@
+{
+  "provenance": "synthetic demonstration unless explicitly replaced by user-exported SwingVision data",
+  "n_sessions": 120,
+  "date_start": "2025-01-05",
+  "date_end": "2026-06-23",
+  "recent_block_changes": {
+    "first_serve_pct": 0.06495475855312094,
+    "double_fault_rate": -0.013458321604750925,
+    "forehand_in_pct": 0.0007976129387317066,
+    "backhand_in_pct": -0.021754807429411716,
+    "rallies_5plus_pct": -0.0020462310872538247,
+    "avg_serve_speed_kmh": 1.8051004647375635,
+    "winner_error_balance": 0.5
+  },
+  "trend_per_10_sessions": {
+    "first_serve_pct": 0.00682162482054609,
+    "backhand_in_pct": 0.009196593320297243,
+    "avg_serve_speed_kmh": 0.9220081561581601,
+    "winner_error_balance": 0.9823598861032018
+  },
+  "walk_forward": {
+    "n_predictions": 90.0,
+    "brier_model": 0.26458718756239047,
+    "brier_baseline": 0.24931824920159865,
+    "logloss_model": 0.7876337208546331,
+    "logloss_baseline": 0.6920045019402122,
+    "auc_model": 0.644544997486174,
+    "auc_baseline": 0.40774258421317244
+  },
+  "model_promotion_gate": {
+    "promote": false,
+    "brier_gain": -0.015268938360791823,
+    "reasons": [
+      "no out-of-sample Brier improvement over expanding win-rate baseline"
+    ]
+  },
+  "leaky_same_match_in_sample_auc": 0.9985859728506787,
+  "assistant_evidence": {
+    "source": "computed session statistics",
+    "block_size": 8,
+    "latest_date": "2026-06-23",
+    "n_sessions": 120,
+    "n_matches": 120,
+    "recent_match_record": {
+      "wins": 3,
+      "losses": 5
+    },
+    "metric_changes": [
+      {
+        "metric": "first_serve_pct",
+        "previous_mean": 0.568263,
+        "recent_mean": 0.633218,
+        "change": 0.064955
+      },
+      {
+        "metric": "double_fault_rate",
+        "previous_mean": 0.053051,
+        "recent_mean": 0.039593,
+        "change": -0.013458
+      },
+      {
+        "metric": "forehand_in_pct",
+        "previous_mean": 0.797797,
+        "recent_mean": 0.798595,
+        "change": 0.000798
+      },
+      {
+        "metric": "backhand_in_pct",
+        "previous_mean": 0.793093,
+        "recent_mean": 0.771339,
+        "change": -0.021755
+      },
+      {
+        "metric": "rallies_5plus_pct",
+        "previous_mean": 0.359066,
+        "recent_mean": 0.35702,
+        "change": -0.002046
+      },
+      {
+        "metric": "avg_serve_speed_kmh",
+        "previous_mean": 131.430795,
+        "recent_mean": 133.235895,
+        "change": 1.8051
+      },
+      {
+        "metric": "winner_error_balance",
+        "previous_mean": -5.25,
+        "recent_mean": -4.75,
+        "change": 0.5
+      }
+    ]
+  },
+  "deterministic_brief": "Evidence-backed tennis brief through 2026-06-23 (120 sessions).\nRecent 8-match record: 3W-5L.\n- avg_serve_speed_kmh: +1.81 km/h versus the previous block.\n- winner_error_balance: +0.50 versus the previous block.\n- first_serve_pct: +6.50 percentage points versus the previous block.\n- backhand_in_pct: -2.18 percentage points versus the previous block.\nInterpret these as descriptive personal trends, not causal coaching conclusions."
+}
