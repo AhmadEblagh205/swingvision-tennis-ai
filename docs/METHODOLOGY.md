@@ -137,3 +137,17 @@ A future real-data extension could include:
 The checked-in 120-match demo plants gradual improvement in latent skill and several observable metrics. It is used for software validation and known-truth reasoning only.
 
 It must never be presented as my tennis performance.
+
+## Notes moved from the README
+
+Leaky comparison. The demo fits a deliberately invalid model to statistics from the same match it is classifying. Its in-sample AUC is about 0.9986. Post-match statistics such as point share and winner/error balance make an invalid experiment look very strong, so the project keeps both the correct and the invalid version.
+
+Synthetic progress benchmark. `tennis_ai.simulate.make_demo_sessions()` creates 120 labelled synthetic matches with a slowly improving latent skill process. It is not meant to resemble my actual tennis level. The analysis recovers the planted long-run movement: average serve speed about +0.92 km/h per 10 sessions, backhand-in rate about +0.92 percentage points per 10 sessions, and first-serve rate about +0.68 percentage points per 10 sessions. The latest eight sessions against the previous eight show first serve up about 6.50 percentage points and backhand-in down about 2.18. A noisy short block and a long-run slope answer different questions.
+
+Promotion gate result on the synthetic data. 90 walk-forward predictions, logistic AUC 0.645, logistic Brier 0.2646 against 0.2493 for the win-rate baseline (improvement -0.0153), so the gate fails and the model is not promoted.
+
+Assistant. The assistant receives only aggregate evidence (data horizon, session count, recent W/L record, recent-versus-previous metric changes). The prompt forbids invented metrics, injury or technique diagnoses and unsupported causal explanations. It is local inference through an Ollama-compatible endpoint, not a fine-tuned model. Fine-tuning on a small table of personal sessions would not be a sensible way to learn numerical progress.
+
+Limits. Correlation between a metric and winning does not show that changing it causes more wins. SwingVision measurements carry their own error, and I treat exported values as measurements. The assistant is not a coach, biomechanical model or medical tool.
+
+SwingVision pages consulted during design: https://swing.vision/, https://swing.tennis/, https://swing.vision/guides/review-your-shot-stats, https://swing.vision/guides/track-your-match
